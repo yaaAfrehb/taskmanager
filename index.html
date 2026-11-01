@@ -1,38 +1,106 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
-    <link rel = "stylesheet" href ="style.css">
-    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-    <h1>
-    TASK MANAGER
-    </h1>
-    <button id ="themeToggle" class="theme-toggle" aria-label="Switch to dark mode">
-        𖤓
-    </button>
+    <header class="header">
+        <h1>TASK MANAGER</h1>
+
+        <button id="themeToggle" class="theme-toggle"
+                aria-label="Switch to dark mode">
+            𖤓
+        </button>
     </header>
 
-    <main>
-        <div class="task-input">
-            <input
-                type="text"
-                id="taskInput"
-                placeholder="Enter new task"
-                maxlength="80"
-            >
-        <button id = "addTask">ADD TASK</button>
-        </div>
-    
-        <p id="taskCount"> 0 / 10 tasks</p>
-        <p id ="error"></p>
+    <main class="dashboard">
 
-        <ol id ="taskList"></ol>
+        <section class="welcome">
+            <h2>Your workspace</h2>
+            <p>Make today productive, one task at a time.</p>
+        </section>
+
+        <!-- STATISTICS -->
+        <section class="stats">
+            <div class="stat-card">
+                <span>Total tasks</span>
+                <strong id="totalTasks">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Completed</span>
+                <strong id="completedTasks">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Remaining</span>
+                <strong id="remainingTasks">0</strong>
+            </div>
+        </section>
+
+        <!-- PROGRESS -->
+        <section class="progress-section">
+            <div class="progress-heading">
+                <h3>Your progress</h3>
+                <span id="progressPercent">0%</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+        </section>
+
+        <!-- ADD TASK -->
+        <section class="add-section">
+            <h3>Add a new task</h3>
+
+            <div class="task-input">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to get done?"
+                    maxlength="80"
+                >
+
+                <select id="taskCategory" aria-label="Task category">
+                    <option value="School">School</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Projects">Projects</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <button id="addTask"> + </button>
+            </div>
+
+            <p id="error"></p>
+            <p id="taskCount">0 / 10 tasks</p>
+        </section>
+
+        <!-- CATEGORY FILTERS -->
+        <section class="filter-section">
+            <h3>Your tasks</h3>
+
+            <div class="filters">
+                <button class="filter active" data-filter="All">All</button>
+                <button class="filter" data-filter="School">School</button>
+                <button class="filter" data-filter="Personal">Personal</button>
+                <button class="filter" data-filter="Projects">Projects</button>
+                <button class="filter" data-filter="Other">Other</button>
+            </div>
+
+            <ol id="taskList"></ol>
+
+            <p id="emptyMessage">No tasks here yet. Add one above!</p>
+        </section>
+
     </main>
+
     <script src="script.js" defer></script>
 </body>
 </html>
