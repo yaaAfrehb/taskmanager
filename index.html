@@ -2,10 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Task Manager</title>
+    <link rel = "stylesheet" href ="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <header>
+    <h1>
+    TASK MANAGER
+    </h1>
+    <button id ="theme-toggle" class="classtoggle" aria-label="Switch to dark mode">
+        𖤓
+    </button>
+    </header>
+
+    <main>
+        <div class="task-input">
+            <input
+                type="text"
+                id="taskinput"
+                placeholder="Enter new task"
+                maxlength="80"
+            >
+        <button id = "addTask">ADD TASK</button>
+        </div>
     
+        <p id="taskCount"> 0 / 10 tasks</p>
+        <p id ="error"></p>
+
+        <ol id ="tasklist"></ol>
+    </main>
 </body>
 </html>
