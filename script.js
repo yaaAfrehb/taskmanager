@@ -106,14 +106,4 @@ themeToggle.addEventListener("click", () => {
   );
 });
 
-function addTask(taskText) {
-  const taskList = document.querySelector("#taskList");
-
-  const taskBubble = document.createElement("div");
-  taskBubble.classList.add("task-bubble");
-  taskBubble.textContent = taskText;
-
-  taskList.appendChild(taskBubble);
-}
-
 

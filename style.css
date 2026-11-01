@@ -39,7 +39,7 @@ body.dark-mode #taskCount {
 }
 
 body.dark-mode .task.completed .task-text {
-  color: #999;
+  color: black;
 }
 
 
