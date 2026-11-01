@@ -3,6 +3,7 @@ const addButton = document.querySelector("#addTask");
 const taskList = document.querySelector("#taskList");
 const taskCount = document.querySelector("#taskCount");
 const error = document.querySelector("#error");
+const themeToggle = document.querySelector("#themeToggle");
 
 
 const MAX_TASKS = 10;
@@ -91,7 +92,6 @@ taskInput.addEventListener("keydown", (event) => {
 
 updateTasks();
 
-const themeToggle = document.querySelector("#themeToggle");
 
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
