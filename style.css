@@ -164,6 +164,7 @@ h1, h2, h3 {
     border-radius: 10px;
     background: white;
     color: #292735;
+    font-family: "Quicksand", sans-serif;
 }
 
 #addTask {
@@ -175,11 +176,14 @@ h1, h2, h3 {
     font-weight: bold;
     cursor: pointer;
     transition: 0.2s;
+    font-family: "Quicksand", sans-serif;
 }
 
 #addTask:hover {
     background: #7259b0;
     transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(99, 102, 241, 0.8), 
+      0 0 80px rgba(99, 102, 241, 0.4); 
 }
 
 #addTask:disabled {
@@ -215,11 +219,12 @@ h1, h2, h3 {
     color: #655b7c;
     cursor: pointer;
     transition: 0.2s;
+    font-family: "Quicksand", sans-serif;
 }
 
 .filter:hover,
 .filter.active {
-    background: #8870c5;
+    background: #2b2182;
     color: white;
 }
 

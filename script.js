@@ -44,7 +44,7 @@ function updateDashboard() {
 
     addButton.textContent = tasks.length >= MAX_TASKS
         ? "LIMIT REACHED"
-        : "ADD TASK";
+        : " + ";
 }
 
 // DISPLAY TASKS
